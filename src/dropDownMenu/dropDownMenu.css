@@ -1,0 +1,33 @@
+.menuButton{
+  font-size: 20px;
+}
+
+.hidden{
+  display: none;
+}
+
+.showList{
+  display: block;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.listItem{
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.flatButton{
+  border: 0;
+}
+
+.shadowButton{
+  border: 0;
+  box-shadow: 1px 1px 1px;
+}
+
+.normalButton{
+  border: 1px solid  black;
+}

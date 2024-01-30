@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.navContainer{
+  display: flex;
+  flex: auto auto auto;
+  margin: 0 0 2px 0;
+  height: 13vh;
+  margin-bottom: 50px;
+}
+
+.navContainer::after{
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 701px){
+  .navContainer>img{
+    display: none;
+  }
+}
