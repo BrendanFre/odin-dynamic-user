@@ -3,22 +3,67 @@ body{
   padding: 0;
 }
 
-
-
-.navContainer{
+.headerBar{
   display: flex;
-  flex: auto auto auto;
-  margin: 0 0 2px 0;
-  height: 13vh;
-  margin-bottom: 50px;
+  flex: 1 1;
+  margin:  auto 0;
+  padding: 0 1vw;
+  height: 4vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navContainer::after{
+.siteIcon{
+  height: 100%;
+  width: 100%;
+}
+
+.menuIcon{
+  height: 100%;
+  z-index: 2;
+}
+
+.headerBar::after{
   margin-top: 5px;
 }
 
+.headerMenu{
+  display: none;
+}
+
+.showMenu{
+  position: absolute;
+  background-color:#cbd5e1;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  gap: 5vh;
+  align-items: center;
+  z-index: 1;
+}
+
+.headerItem{
+  list-style: none;
+}
+
 @media screen and (min-width: 701px){
-  .navContainer>img{
+  .headerBar>img{
     display: none;
+  }
+  .headerMenu{
+    display: flex;
+    justify-content:end;
+    width: 33%;
+    gap: 10px;
+    margin: 0;
+  }
+  .headerItem{
+    list-style: none;
   }
 }

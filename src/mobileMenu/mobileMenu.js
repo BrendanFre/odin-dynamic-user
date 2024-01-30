@@ -1,6 +1,17 @@
 import './mobileMenu.css'
 import burger from './icons/menu.png'
-const updateNavColor = (navBar, color) => {
+
+const showNav = () => {
+  const headerMenu = document.querySelector('.headerMenu');
+  const menuButton = document.querySelector('.menuIcon')
+  if(headerMenu.classList.contains('showMenu')) {
+    headerMenu.classList.remove('showMenu');
+
+  } else { headerMenu.classList.add('showMenu');
+}
+}
+
+const updateNavColor = (headerBar, color) => {
   let colorPicker = ""
   switch (color) {
     case 1:
@@ -19,7 +30,7 @@ const updateNavColor = (navBar, color) => {
       colorPicker = "#111827";
       break;
   };
-  navBar.style.backgroundColor = colorPicker;
+  headerBar.style.backgroundColor = colorPicker;
   
 }
 
@@ -37,17 +48,19 @@ export default (parent, color, siteIdentity) => {
 /**
  * Mobile menu that only triggers on displays under 600px
  */
-const navBar = document.createElement('nav');
-const siteDetail = document.createElement('div');
+const headerBar = document.querySelector('.headerBar')
+const siteDetail = document.querySelector('.siteIcon')
 const menuIcon = document.createElement('img');
 
 addLogo(siteDetail, siteIdentity);
 
 menuIcon.src = burger;
-navBar.appendChild(siteDetail);
-navBar.appendChild(menuIcon);
-navBar.classList.add('navContainer');
-updateNavColor(navBar, color);
-  parent.appendChild(navBar);
+menuIcon.classList.add('menuIcon');
+menuIcon.addEventListener('click', () => {
+  showNav(headerBar);
+})
+
+headerBar.appendChild(menuIcon);
+updateNavColor(headerBar, color);
 
 }
