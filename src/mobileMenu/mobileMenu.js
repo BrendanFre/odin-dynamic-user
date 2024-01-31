@@ -44,7 +44,7 @@ const addLogo = (siteDetail, logo) =>{
   }
 }
 
-export default (parent, color, siteIdentity) => {
+export default (color, siteIdentity) => {
 /**
  * Mobile menu that only triggers on displays under 600px
  */

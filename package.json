@@ -1,23 +1,27 @@
 {
   "name": "bean-dynamic-user",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "A collection of useful user dynamic interfaces.",
-  "main": "index.js",
+  "main": "./dist/app.bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack serve --open",
-    "prepare": "npm run build"
+    "prepare": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "Brendan Freeman",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^6.9.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^3.3.4",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "mini-css-extract-plugin": "^2.7.7"
   }
 }
