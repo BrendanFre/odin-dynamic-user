@@ -1,3 +1,8 @@
+:root{
+  --primary-color: #e2e8f0;
+  --primary-font: verdana, sans-serif;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -6,16 +11,25 @@ body{
 .headerBar{
   display: flex;
   flex: 1 1;
-  margin:  auto 0;
   padding: 0 1vw;
-  height: 4vh;
+  height: 10vh;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
+  margin: auto 0;
+  color: black;
+}
+
+.blue-nav{
+  background-color: #0c4a6e;
+  color: var(--primary-color) !important;
 }
 
 .siteIcon{
-  height: 100%;
-  width: 100%;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 50% 0;
+  font-family: var(--primary-font);
 }
 
 .menuIcon{
@@ -62,8 +76,12 @@ body{
     width: 33%;
     gap: 10px;
     margin: 0;
+    font-family: var(--primary-font);
+    
   }
   .headerItem{
     list-style: none;
+    color: var(--primary-color);
+    
   }
 }
