@@ -6,13 +6,9 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: 'production',
-  entry: {
-    app: './src/index.js',
-    hot: 'webpack/hot/dev-server.js',
-    client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
-  },
+  entry:  './src/index.js',
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name]-bean-dynamic-user.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     globalObject: 'this',
@@ -22,17 +18,11 @@ module.exports = {
     }
   },
   devtool: 'source-map',
-  devServer: {
-    static: './dist',
-    hot: false,
-    client: false,
-  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Dropdown-example',
       template: './src/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin(),
   ],
 

@@ -3,7 +3,9 @@ import burger from './icons/menu.png'
 
 const showNav = () => {
   const headerMenu = document.querySelector('.headerMenu');
-  const menuButton = document.querySelector('.menuIcon')
+  const menuButton = document.createElement('img');
+
+  menuButton.src = burger;
   if(headerMenu.classList.contains('showMenu')) {
     headerMenu.classList.remove('showMenu');
 
@@ -34,7 +36,7 @@ const updateNavColor = (headerBar, color) => {
   
 }
 
-const addLogo = (siteDetail, logo) =>{
+const addLogo = (siteDetail, logo) => {
   if (logo.includes('/')){
     const theLogo = document.createElement('img');
     theLogo.src = logo;
@@ -51,8 +53,8 @@ export default (color, siteIdentity) => {
 const headerBar = document.querySelector('.headerBar')
 const siteDetail = document.querySelector('.siteIcon')
 const menuIcon = document.createElement('img');
-
-addLogo(siteDetail, siteIdentity);
+headerBar.appendChild(menuIcon);
+addLogo(siteDetail, 'LOGO');
 
 menuIcon.src = burger;
 menuIcon.classList.add('menuIcon');

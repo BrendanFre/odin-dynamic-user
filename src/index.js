@@ -3,7 +3,7 @@ import mobileMenu from "./mobileMenu/mobileMenu";
 
 // const app = document.querySelector('.app');
 
-mobileMenu(app, 2, "Trees")
+mobileMenu(2, "Trees")
 
 // dropDownMenu(app, "Menu", "#FFFFFF", [{"link": "https://gameroracle.com", "name": "gamer oracle"}], 'flat');
 
