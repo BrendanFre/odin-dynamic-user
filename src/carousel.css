@@ -1,3 +1,20 @@
 .leftArrow{
   top: 200
 }
+
+.innerFrame {
+  margin: 10px 20px;
+  position: relative;
+}
+
+.innerFrame img{
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

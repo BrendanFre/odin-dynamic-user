@@ -1,4 +1,5 @@
 import dropDownMenu from "./dropDownMenu/dropDownMenu";
+import html from "./index.html";
 import mobileMenu from "./mobileMenu/mobileMenu";
 import carousel from "./carousel";
 import 'core-js/stable';

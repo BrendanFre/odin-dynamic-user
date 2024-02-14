@@ -1,5 +1,5 @@
 import './mobileMenu.css'
-import burger from './icons/menu.png'
+import burger from '../iconLibrary/pngs/menu.png'
 
 const showNav = () => {
   const headerMenu = document.querySelector('.headerMenu');
